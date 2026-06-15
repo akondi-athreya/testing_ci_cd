@@ -19,6 +19,10 @@ app.get("/api/v1", (req, res) => {
     })
 });
 
+app.get("/get-users", (req, res) => {
+    return res.status(200).json({message: "There are no users in our application currently"});
+})
+
 app.listen(PORT, () => {
     console.log(`Server is running at port : ${PORT}`);
 });
