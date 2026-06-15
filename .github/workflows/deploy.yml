@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
-          scripts: |
+          script: |
             cd "/home/ubuntu/testing_ci_cd"
 
             git pull origin main
