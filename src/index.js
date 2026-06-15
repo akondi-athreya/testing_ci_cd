@@ -32,6 +32,12 @@ app.get("/status", (req, res) => {
     })
 });
 
+app.get("/api/v2", (req, res) => {
+    return res.status(200).json({
+        message: "Finally pipeline is working"
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running at port : ${PORT}`);
 });
