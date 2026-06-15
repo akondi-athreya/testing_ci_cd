@@ -20,8 +20,17 @@ app.get("/api/v1", (req, res) => {
 });
 
 app.get("/get-users", (req, res) => {
-    return res.status(200).json({message: "There are no users in our application currently"});
-})
+    return res.status(200).json({
+        message: "There are no users in our application currently"
+    });
+});
+
+app.get("/status", (req, res) => {
+    return res.status(200).json({
+        message: "implemented pipeline",
+        counter: counter++
+    })
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running at port : ${PORT}`);
